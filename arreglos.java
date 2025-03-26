@@ -1,27 +1,36 @@
 import java.util.Scanner;
 
-public class arreglos {
+public class arreglos{
+
+    public static int T = 20; //tamaño máximo del grupo
+
+    public static void leerCalificaciones(){
+
+    }
+
+    public static void evaluarCalificaciones(){
+
+    }
+
     public static void main(String[] args) {
-        double[] calificaciones = new double[5];
+        double[] parcial1, parcial2, parcial3, parcial4; //Solo declarando arreglos
+        double[] promInd;
+        boolean[] aprobados;
+
+        double[] calificaciones = new double[5]; //declarando y construyendo un arreglo
         Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < calificaciones.length; i++) {
-            System.out.println("Escribe la calificación [" + i + "]: ");
+        for(int i=0;i<calificaciones.length; i++){
+            System.out.println("Ingresa califiación [" + i + "]: ");
             calificaciones[i] = sc.nextDouble();
         }
-        //no se imprime el contenido de toas las casillas del arreglo
-        //solo se imrpime la dirección de memoria en donde empieza el arreglo 
+        //No se imprime el contenido de todas las casillas del arreglo
+        //solo se imprime la dirección de memoria en donde empieza el arreglo
         //System.out.println("calificaciones: " + calificaciones);
-
-        //Impresión usando el for extendido 
-        System.out.println("Contenido del arreglo de calificaciones: ");
-        for (double calificacion : calificaciones) 
-            System.out.println(calificacion);   
-
-        System.out.println("Contenido de calificaciones : ");
-        //Impresión usando el for normal
-        for (int i = 0; i < calificaciones.length; i++) 
-            System.out.println( calificaciones[i]);
-        sc.close();
         
+        //Imoresión usando el for extendido
+        System.out.println("Contenido del arreglo calificaciones: ");
+        for(int i=0; i<calificaciones.length; i++)
+            System.out.println(calificaciones[i]);
+        sc.close();
     }
 }
