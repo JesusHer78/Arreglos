@@ -50,6 +50,13 @@ public class arreglos{
         }
     }
 
+    public static double calcularPromedioFrupo (double  [] proms){
+        double suma=0;
+        for(int i=0;i<proms.length;i++)
+            suma+=proms[i];
+        return suma/proms.length;
+    }
+
     public static void main(String[] args) {
         double[] parcial1, parcial2, parcial3, parcial4; //Solo declarando arreglos
         double[] promInd;
@@ -104,11 +111,8 @@ public class arreglos{
             imprimirCalificaciones(promInd);
             System.out.println("Estudiantes aprobados: ");
             imprimirResultados(aprobados);
-
-
-
-            sc.close();
-        
-
+            System.out.println("-------------------------------------");
+            System.out.println("El promedio del grupo es : " + calcularPromedioFrupo(promInd));
+            sc.close(); 
     }
 }
